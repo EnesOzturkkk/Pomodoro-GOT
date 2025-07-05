@@ -271,7 +271,7 @@ function pomodoroTime(buttonHTML) {
         return;
     }
 
-    if (buttonHTML === "Start") {
+    if (buttonHTML === "Start" || buttonHTML === "Başlat") {
         clearInterval(intervalId);
 
         intervalId = setInterval(function() {
@@ -340,9 +340,9 @@ function pomodoroTime(buttonHTML) {
 
             $(".pomodoro").html(formatTime(currentMinutes * 60 + seconds)); 
         }, 1000); 
-    } else if (buttonHTML === "Stop") {
+    } else if (buttonHTML === "Stop" || buttonHTML === "Durdur") {
         clearInterval(intervalId);
-    } else if (buttonHTML === "Restart") {
+    } else if (buttonHTML === "Restart" || buttonHTML === "Yeniden Başlat") {
         clearInterval(intervalId);
         isLessonTime = true;
         lessonsCompleted = 0;
