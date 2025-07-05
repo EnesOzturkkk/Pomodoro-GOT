@@ -1,0 +1,558 @@
+
+body {
+    margin: 0px;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
+}
+
+.family-name {
+    font-size: 3rem;
+    color: #DBEDF3;
+    font-family: "Arvo", cursive;
+    text-shadow: 4px 0 #b85621;
+    grid-column: span 5;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.settings {
+    font-size: 4rem;
+    background-color: rgb(42, 40, 40);
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.settings:hover {transform: scale(1.1);}
+
+.buttons {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    padding: 10px;
+}
+
+.music-box {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1rem; 
+    box-shadow: 0rem 0.25rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.music-photo {
+    width: 100%; 
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.music-photo:hover {transform: scale(1.1);}
+
+.music-name {
+    justify-content: center;
+    height: auto;
+    align-content: center;
+    color: #ffffff; 
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0rem;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-width: 100%; 
+}
+
+.progress-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    width: 100%; 
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.time-display {
+    font-size: 1.1rem;
+    color: #eee;
+    min-width: 40px; 
+    text-align: center;
+}
+
+.progress-bar-container {
+    width: 100%;    
+    height: 8px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 5px;
+    position: relative; 
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #ff0000; 
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.progress-handle {
+    width: 16px;
+    height: 16px;
+    background-color: #fff; 
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    left: 0%;
+    cursor: grab; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 10; 
+}
+
+.music-buttons {
+    display: flex;
+    gap: 15px; 
+}
+
+.left-button{box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5);}
+.play-button{box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5);}
+.right-button{box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5);}
+
+.msc-btn {
+    background: none;
+    border-radius: 10%; 
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.1s ease-in-out;
+}
+
+.msc-btn img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.msc-btn:hover {transform: scale(1.1);}
+
+.play-button img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.ssr-button {
+    background-color: rgb(42, 40, 40);
+    color: #DBEDF3;
+    font-family: "Arvo", cursive;
+    text-shadow: 1.8px 0 #b85621;
+    font-size: 1.1rem; 
+    width: 100%; 
+    max-width: 150px; 
+    padding: 8px 15px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;    
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);  
+}
+
+.ssr-button:hover {transform: scale(1.1);}
+
+.pomodoro-div {
+    grid-column: span 3;
+}
+
+.pomodoro {
+    display: flex;
+    justify-content: center;
+    color: #DBEDF3;
+    font-family: "Arvo", cursive;
+    text-shadow: 3.5px 0 #b85621;
+    font-size: 4.5rem;
+}
+.check {
+    padding: 0.5rem;
+    max-width: 265px;
+    border: 6px solid rgb(42, 40, 40);
+    display: flex; 
+    flex-wrap: wrap; 
+    word-break: break-all; 
+    box-shadow: 0.75rem 0.75rem 0.75rem 0.75rem rgba(0, 0, 0, 0.4);
+}
+
+.check:hover {transform: scale(1.1);}
+
+.btn {
+    width: 100%;
+    height: auto;
+    max-width: 15rem; 
+    border: 10px solid rgb(42, 40, 40);
+    display: none; 
+    margin: 0 auto;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);   
+}
+
+.btn:hover {transform: scale(1.1);}
+
+.pressed {
+  box-shadow: 0 3px 4px 0px #DBEDF3;
+  opacity: 0.5;
+}   
+
+.footer-itself img {
+    width: 3.5rem;
+}
+
+.footer-itself {
+    display: flex;
+    padding: 2rem 1rem;
+    justify-content: space-between;
+}
+
+#footer-icons a{
+    padding-right: 1.5rem;
+}
+
+.bottom {
+    margin-top: 0px;    
+    padding-bottom: 1rem;
+}
+
+.email, .copy-right {
+    color: #DBEDF3;
+    font-family: "Arvo", cursive;
+    text-shadow: 1.8px 0 #b85621;
+    font-size: 1.5rem; 
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-right: 3rem;
+}
+
+.gradient-background {
+  background: linear-gradient(300deg, rgb(15, 14, 14), rgb(106, 101, 101), rgb(15, 14, 14));
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@media (min-width:1350px) {
+    .container {
+        background-color: rgb(15, 14, 14);
+        gap: 3rem;
+        display: grid;
+        grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+        grid-template-columns: 1fr 1fr 2fr 2fr 2fr 2fr;
+    }
+    
+    .settings {
+        grid-area: 1 / 1 / 2 / 2;
+        margin: 1.5rem;
+    }
+    .family-name {
+        grid-area: 1 / 2 / 2 / 6;
+        margin: 20px;
+        font-size: 4rem;
+    }
+    
+    .check {
+        grid-area: 2 / 1 / 3 / 2;
+        margin-left: 1.5rem;
+        display: flex;
+    }
+    .buttons{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .ssr-button {
+        font-size: 2rem;
+    }
+    .pomodoro-div {
+        grid-area: 2 / 3 / 3 / 6;
+    }
+    .music-box {
+        grid-area: 1 / 6 / 3 / 7;
+        margin-right: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 6px solid rgb(178, 146, 21);
+        background-color: rgb(235, 230, 210);
+    }
+    .progress-bar-container {
+        min-width: 10rem;
+    }
+    .family-photos {
+        grid-area: 3 / 1 / 4 / 7;
+        align-items: center;
+        display: flex;
+    }
+    .bottom {
+        grid-area: 4 / 1 / 5 / 7;
+    }
+}
+
+
+
+@media (min-width:651px) and (max-width: 1349px) {
+    .container {
+        display: grid;
+        padding: 1rem;
+        grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.5fr;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
+    .family-name {
+        grid-area: 1 / 2 / 2 / 6;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .settings {
+        grid-area: 1 / 1 / 2 / 2;
+        margin: 1rem 0rem 0rem 1rem;
+    }
+    .buttons {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .pomodoro-div {
+        grid-area: 2 / 2 / 3 / 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+    .music-box {
+        grid-area: 3 / 1 / 4 / 7;
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem; 
+        flex-wrap: nowrap; 
+        width: auto; 
+        max-width: none; 
+        padding: 25px; 
+    }
+
+    .music-box .music-photo {
+        width: 20%; 
+        height: 100%; 
+        flex-shrink: 0; 
+        border-radius: 0.75rem; 
+    }
+    .music-box .music-photo:hover {
+        transform: scale(1.05); 
+    }
+
+    .music-box .music-mid { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1; 
+        gap: 0.8rem; 
+        min-width: 200px; 
+        max-width: 400px; 
+    }
+
+    .music-box .music-name {
+        font-size: 1.4em; 
+        max-width: 100%; 
+        margin: 0; 
+    }
+    .music-box .progress-section {
+        width: 90%; 
+        margin: 0; 
+    }
+    .music-box .time-display {
+        font-size: 1.15rem; 
+        min-width: 45px; 
+    }
+    .music-box .progress-bar-container {
+        height: 18px;
+    }
+    .music-box .progress-handle {
+        width: 17px; 
+        height: 17px;
+    }
+
+    .music-box .music-buttons {
+        gap: 18px; 
+        flex-shrink: 0; 
+        margin-top: 0; 
+    }
+    .music-box .left-button, .music-box .play-button, .music-box .right-button {
+        box-shadow: 0.35rem 0.35rem 0.35rem 0.35rem rgba(0, 0, 0, 0.5);
+    }
+    .music-box .msc-btn img {
+        height: 3.2rem; 
+        width: 3.2rem;
+    }
+    .music-box .play-button img {
+        height: 4.5rem; 
+        width: 4.5rem;
+    }
+
+
+
+    .check {
+        grid-area: 1 / 6 / 3 / 7;
+        background-color: #2f3030;
+        margin-top: 20px;
+        text-align: right;
+        display: flex;
+        justify-content: center;
+    }
+    .family-photos {
+        grid-area: 4 / 1 / 5 / 7;
+        display: flex;
+        justify-content: space-around; 
+        gap: 0.5rem; 
+        padding: 0 1rem;
+    }
+    .family-photos .btn {
+        width: calc(33.33% - 1rem); 
+        max-width: 100%; 
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        box-sizing: border-box; 
+        flex-shrink: 1; 
+    }
+    .bottom {
+        grid-area: 5 / 1 / 6 / 7;
+    }
+    .invisibility {
+        visibility: hidden;
+    }
+    .footer-itself img {
+        width: 3rem;
+    }
+    .footer-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .email, .copy-right {
+        font-size: 1.3rem; 
+    }
+}
+
+
+@media (max-width:650px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-columns: 3fr 1fr;
+        gap: 1.5rem;
+
+    }
+    .family-name {
+        grid-area: 1 / 1 / 2 / 2;
+        margin: 0px;
+        margin-left: 1rem;
+    }
+    .settings {
+        margin-right: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    
+    .music-box {
+        grid-area: 2 / 1 / 3 / 3;
+        margin-left: 2rem; 
+        margin-right: 2rem; 
+    }
+
+    .progress-bar-container {
+        min-width: 12rem;
+    }
+
+    .pomodoro-div {
+        margin-left: 0.5rem;
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .pomodoro {
+        font-size: 4rem;
+    }
+    .buttons {
+        grid-area: 3 / 2 / 4 / 3;
+        margin-right: 0.5rem;
+    }
+    .family-photos {
+        grid-area: 4 / 1 / 5 / 2;
+        margin-left: 0.5rem;
+    }
+    .check {
+        grid-area: 4 / 2 / 5 / 3;
+        background-color: #2f3030;
+        height: 14.4rem;
+        margin-top: 0px;
+        margin-right: 0.5rem;
+    }
+    .bottom {
+        grid-area: 5 / 1 / 6 / 3;
+        margin: 0rem; 
+        padding-left: 0; 
+        padding-right: 0;
+    }
+    .footer-itself img {
+        width: 3.5rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .email, .copy-right {
+        text-shadow: 1.4px 0 #b85621;
+        font-size: 1rem; 
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        padding-right: 1rem;
+    }
+    .bottom {
+        padding-bottom: 0rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+    .footer-itself {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .copy-right {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .email {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    #footer-icons {
+        grid-area: 2 / 1 / 3 / 3;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
