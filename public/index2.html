@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro GOT</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <button class="settings">⚙️</button>
+        <p class="family-name">Lannister 🦁 Family</p>
+        
+        <p class="check">✔️</p>
+        <div class="buttons">
+            <button class="ssr-button">Start</button>
+            <button class="ssr-button">Stop</button>
+            <button class="ssr-button">Restart</button>
+        </div>
+        
+        <div class="pomodoro-div">
+            <p class="pomodoro">20.00</p>
+        </div>
+
+       <div class="music-box">
+            <img src="../music-covers/drago.jpg" alt="Music Album Art" class="music-photo">
+            
+            <div class="music-mid">
+                <p class="music-name">Şarkı Adı Buraya Gelecek</p>
+
+                <div class="progress-section">
+                    <span id="currentTimeDisplay" class="time-display">0:00</span>
+                    <div class="progress-bar-container">
+                        <div id="progressBar" class="progress-bar"></div>
+                        <div id="progressHandle" class="progress-handle"></div>
+                    </div>
+                    <span id="totalTimeDisplay" class="time-display">0:00</span>
+                </div>
+            </div>
+            
+            <div class="music-buttons">
+                <button class="left-button msc-btn" style="height: 80px;"><img src="../images/buttons/left-button.png" alt="Previous Song"></button>
+                <button class="play-button msc-btn" style="height: 80px;"><img src="../images/buttons/play-button.png" alt="Play/Pause"></button>
+                <button class="right-button msc-btn" style="height: 80px;"><img src="../images/buttons/right-button.png" alt="Next Song"></button>
+            </div>
+        </div>
+        
+        <div class="family-photos">
+            <img src="../family-images/Lannisters/Lannisters1/1.jpg" alt="" class="btn" id="first">
+            <img src="../family-images/Lannisters/Lannisters2/1.jpg" alt="" class="btn" id="second">
+            <img src="../family-images/Lannisters/Lannisters3/1.jpg" alt="" class="btn">
+            <img src="../family-images/Lannisters/Lannisters4/1.jpg" alt="" class="btn" id="fourth">
+            <img src="../family-images/Lannisters/Lannisters5/1.jpg" alt="" class="btn">
+        </div>
+        
+        <div class="bottom gradient-background">
+            <hr >
+            <footer class="footer-itself"> 
+                
+                <div class="copy-right">  
+                    <span class="footer-type">© 2025 Enes Öztürk</span> 
+                </div> 
+
+                <div class="email">Email: enesozturk032@gmail.com</div>
+
+                <div id="footer-icons">
+                    <a href="https://www.linkedin.com/in/enes-%C3%B6zt%C3%BCrk-7a2518324/" aria-label="LinkedIn">
+                        <img src="../footer-images/linkedin.png" alt="">
+                    </a>
+
+                    <a href="https://www.instagram.com/eneszttrrk_/" aria-label="Instagram">
+                        <img src="../footer-images/insta.png" alt="">
+                    </a>
+
+                    <a href="https://x.com/notesfromenes" aria-label="X">
+                        <img src="../footer-images/x.png" alt="">
+                    </a>
+                </div>
+                
+            </footer> 
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+    <script src="index2.js"></script>
+</body>
+</html>
