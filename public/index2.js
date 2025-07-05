@@ -486,14 +486,17 @@ window.addEventListener('resize', function() {
 const starkBackgroundColor ="rgb(145, 140, 121)";
 const starkBorderButtonColor ="#54614b";
 const starkLinearGradientMid = "rgb(235, 230, 210)";
+const starkBoxShadowColor = "rgba(0, 0, 0, 0.5)"; 
 
 const lannisterBackgroundColor ="rgb(153, 31, 18)";
 const lannisterBorderButtonColor ="#c7b28a";
 const lannisterLinearGradientMid = "rgb(250, 131, 108)";
+const lannisterBoxShadowColor = "rgba(0, 0, 0, 0.5)"; 
 
 const targaryenBackgroundColor = "rgb(15, 14, 14)";
 const targaryenBorderButtonColor = "#2a2828";
 const targaryenLinearGradientMid = "rgb(106, 101, 101)";
+const targaryenBoxShadowColor = "rgba(255, 255, 255, 0.5)"; 
 
 let currentSelectedFamilyName = "Lannister";
 
@@ -516,15 +519,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 case "Lannister":
                     document.querySelectorAll(".btn")
                     familyNameElement.text(`${formattedFamilyName} 🦁 Family`);
-                    styleFamily(lannisterBackgroundColor, lannisterBorderButtonColor, lannisterLinearGradientMid);
+                    styleFamily(lannisterBackgroundColor, lannisterBorderButtonColor, lannisterLinearGradientMid, lannisterBoxShadowColor);
                     break;
                 case "Stark":
                     familyNameElement.text(`${formattedFamilyName} 🐺 Family`); 
-                    styleFamily(starkBackgroundColor, starkBorderButtonColor, starkLinearGradientMid);
+                    styleFamily(starkBackgroundColor, starkBorderButtonColor, starkLinearGradientMid, starkBoxShadowColor);
                     break;
                 case "Targaryen":
                     familyNameElement.text(`${formattedFamilyName} 🐉 Family`); 
-                    styleFamily(targaryenBackgroundColor, targaryenBorderButtonColor, targaryenLinearGradientMid);
+                    styleFamily(targaryenBackgroundColor, targaryenBorderButtonColor, targaryenLinearGradientMid, targaryenBoxShadowColor);
+                    
                     break;
             }
         }
@@ -547,7 +551,7 @@ $(document).ready(function() {
     }
 });
 
-function styleFamily (backgroundColor, borderColor, linearGradientMid) {
+function styleFamily (backgroundColor, borderColor, linearGradientMid, boxShadowColor) {
 
     $(".family-name").css("text-shadow", "5px 0 "+ borderColor);
     $(".settings").css("background-color", borderColor);
@@ -570,11 +574,20 @@ function styleFamily (backgroundColor, borderColor, linearGradientMid) {
     $(".progress-bar").css("background-color", backgroundColor);
     $(".time-display").css("color", borderColor);
     
-    if (windowWidth >= 1350) {
+    $(".settings, .msc-btn, .ssr-button, .btn").css("box-shadow", `0.5rem 0.5rem 0.5rem 0.5rem ${boxShadowColor}`);
+
+    $(".left-button, .play-button, .right-button").css("box-shadow", `0.3rem 0.3rem 0.3rem 0.3rem ${boxShadowColor}`);
+    
+    $(".check").css("box-shadow", `0.6rem 0.6rem 0.6rem 0.6rem ${boxShadowColor}`);
+
+    $(".music-box, .ssr-button").css("box-shadow", `0.4rem 0.4rem 0.4rem 0.4rem ${boxShadowColor}`);
+
+
+    if (window.innerWidth >= 1350) {
         $(".container").css("background-color", backgroundColor);
         $(".check").css("background-color", linearGradientMid);
     }
-    else if (windowWidth < 1350 && windowWidth > 650) {
+    else if (window.innerWidth < 1350 && window.innerWidth > 650) {
         $(".container").css("background-color", backgroundColor);
         $(".check").css("background-color", linearGradientMid);
     }
