@@ -238,6 +238,8 @@ body {
     padding-right: 3rem;
 }
 
+.settings, .check, .btn {border-radius: 10%;}
+
 .gradient-background {
   background: linear-gradient(300deg, rgb(15, 14, 14), rgb(106, 101, 101), rgb(15, 14, 14));
   background-size: 180% 180%;
@@ -425,6 +427,7 @@ body {
         text-align: right;
         display: flex;
         justify-content: center;
+        border-radius: 10%;
     }
     .family-photos {
         grid-area: 4 / 1 / 5 / 7;
@@ -513,6 +516,7 @@ body {
         height: 14.4rem;
         margin-top: 0px;
         margin-right: 0.5rem;
+        border-radius: 5%;
     }
     .bottom {
         grid-area: 5 / 1 / 6 / 3;
