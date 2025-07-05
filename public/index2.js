@@ -590,6 +590,7 @@ function styleFamily (backgroundColor, borderColor, linearGradientMid, boxShadow
     else if (window.innerWidth < 1350 && window.innerWidth > 650) {
         $(".container").css("background-color", backgroundColor);
         $(".check").css("background-color", linearGradientMid);
+        $(".btn").css("box-shadow", `0.33rem 0.33rem 0.33rem 0.33rem ${boxShadowColor}`);
     }
     else {
         $(".ssr-button").css("text-shadow", "1.8px 0 "+ backgroundColor);
@@ -597,5 +598,6 @@ function styleFamily (backgroundColor, borderColor, linearGradientMid, boxShadow
         $(".family-name").css("text-shadow", "5px 0 "+ borderColor);
         $(".container").css("background-color", backgroundColor);
         $(".check").css("background-color", linearGradientMid);
+        $(".btn").css("box-shadow", `0.33rem 0.33rem 0.33rem 0.33rem ${boxShadowColor}`);
     };
 }
