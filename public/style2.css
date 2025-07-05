@@ -297,6 +297,7 @@ body {
     .music-box {
         grid-area: 1 / 6 / 3 / 7;
         margin-right: 1.3rem;
+        margin-top: 0.6rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
