@@ -47,6 +47,8 @@ h1, h2, .quote, .family{
     border: 4px solid #141313;
     border-radius: 10%;
     font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(255, 255, 255, 0.5);
 }
 
 #language{
@@ -58,6 +60,7 @@ h1, h2, .quote, .family{
     padding-bottom: 0.5rem;
     font-family: "Arvo", cursive; 
     box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
 
@@ -99,7 +102,8 @@ h2 {
 
 .family-logo {
     height: 130px;
-    width: 130px; 
+    width: 130px;
+    cursor: pointer; 
 }
 
 .logo-button{
@@ -110,11 +114,13 @@ h2 {
     box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(255, 255, 255, 0.5);
 }
 
-.logo-button:hover {transform: rotate(45deg) scale(1.20)}
+.logo-button:hover {transform: rotate(45deg) scale(1.20);}
 
 #language:hover{
     transform: scale(1.20);
 }
+
+#English:hover, #Türkçe:hover {transform: scale(1.15);}
 
 
 .logos-inside {
@@ -177,6 +183,8 @@ h2 {
     padding-right: 3rem;
 }
 
+
+.footer-itself img:hover {transform: scale(1.25);}
 
 @media (max-width: 650px) {
     .container {
@@ -250,7 +258,7 @@ h2 {
     
 }
 
-@media (min-width: 650px) {
+@media (min-width: 1350px) {
     .logos-inside:hover{
         transform: scale(1.20);
     }
