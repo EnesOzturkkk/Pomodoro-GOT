@@ -198,14 +198,17 @@ $("button").on("click", function() {
     var buttonHTML = this.innerHTML;
     console.log(buttonHTML);
     switch(buttonHTML) {
+        case "Başlat":
         case "Start":
             buttonAnimation(0);
             pomodoroTime(buttonHTML);
             break;
+        case "Durdur":
         case "Stop":
             buttonAnimation(1);
             pomodoroTime(buttonHTML);
             break;
+        case "Yeniden Başlat":
         case "Restart":
             buttonAnimation(2);
             pomodoroTime(buttonHTML);
